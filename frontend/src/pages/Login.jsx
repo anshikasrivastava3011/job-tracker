@@ -99,3 +99,82 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+
+
+
+
+// import React, { useState, useContext } from 'react';
+// import { AuthContext } from '../context/AuthContext.jsx';
+// import { useNavigate } from 'react-router-dom';
+// import { jwtDecode } from "jwt-decode";
+
+// const Login = () => {
+//   const { setCurrentUser } = useContext(AuthContext);
+//   const navigate = useNavigate();
+
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [error, setError] = useState('');
+
+//   const handleLogin = async (e) => {
+//     e.preventDefault();
+//     setError('');
+
+//     try {
+//       const res = await fetch('http://localhost:5000/api/auth/login', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({ email, password }),
+//       });
+
+//       const data = await res.json();
+
+//       if (!res.ok) {
+//         setError(data.message || 'Login failed');
+//         return;
+//       }
+
+//       localStorage.setItem('token', data.token);
+//       const decoded = jwtDecode(data.token);
+//       setCurrentUser(decoded);
+
+//       navigate('/dashboard'); // ✅ redirect after login
+
+//     } catch (err) {
+//       setError('An error occurred while logging in.');
+//     }
+//   };
+
+//   return (
+//     <div style={{ padding: '2rem' }}>
+//       <h2>Login</h2>
+//       {error && <p style={{ color: 'red' }}>{error}</p>}
+//       <form onSubmit={handleLogin}>
+//         <input
+//           type="email"
+//           placeholder="Email"
+//           value={email}
+//           required
+//           onChange={(e) => setEmail(e.target.value)}
+//           style={{ margin: '8px', padding: '8px' }}
+//         />
+//         <input
+//           type="password"
+//           placeholder="Password"
+//           value={password}
+//           required
+//           onChange={(e) => setPassword(e.target.value)}
+//           style={{ margin: '8px', padding: '8px' }}
+//         />
+//         <button type="submit" style={{ padding: '8px 16px' }}>
+//           Login
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default Login

@@ -30,7 +30,6 @@ const Register = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex flex-col items-center justify-center px-4">
       
-      {/* Header */}
       <div className="text-center mb-10">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-2">
           Create an Account
@@ -42,7 +41,6 @@ const Register = () => {
         <p className="text-gray-600 text-lg">Add jobs, track status, and never miss a follow-up!</p>
       </div>
 
-      {/* Register Form Card */}
       <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md border border-gray-200">
         <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">Register</h2>
 
@@ -82,7 +80,6 @@ const Register = () => {
           </button>
         </form>
 
-        {/* Login Prompt + Button */}
         <div className="mt-8 text-center">
           <p className="text-gray-500 mb-3">Already have an account? Just log in!</p>
           <button
@@ -92,6 +89,7 @@ const Register = () => {
             Login
           </button>
         </div>
+        <p>Log in after Registering</p>
       </div>
     </div>
   );

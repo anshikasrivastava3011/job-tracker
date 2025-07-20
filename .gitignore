@@ -12,3 +12,5 @@ logs
 # build output
 dist/
 build/
+
+backend/.env
