@@ -7,7 +7,7 @@ exports.register = async (req, res) => {
   try {
     const newUser = new User({ name, email, password });
     await newUser.save();
-    console.log("👉 Saved password:", newUser.password); // Should show a hashed version
+    console.log("👉 Saved password:", newUser.password); 
 
     res.status(201).json({ message: 'User registered successfully' });
   } catch (err) {
